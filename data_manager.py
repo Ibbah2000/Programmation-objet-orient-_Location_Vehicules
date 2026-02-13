@@ -24,3 +24,14 @@ def sauvegarder_reservations(reservations):
     with open("reservations.json", "w", encoding="utf-8") as f:
         donnees = [r.to_dict() for r in reservations]
         json.dump(donnees, f, indent=4)
+
+
+# Question 12
+from models.reservation import Reservation
+
+def charger_reservations():
+    if not os.path.exists("reservations.json"):
+        return []
+    with open("reservations.json", "r", encoding="utf-8") as f:
+        donnees = json.load(f)
+        return [Reservation.from_dict(d) for d in donnees]        
