@@ -16,3 +16,11 @@ def charger_vehicules():
     with open("vehicules.json", "r", encoding="utf-8") as f:
         donnees = json.load(f)
         return [Vehicule.from_dict(d) for d in donnees]
+    
+
+
+# Question 9
+def sauvegarder_reservations(reservations):
+    with open("reservations.json", "w", encoding="utf-8") as f:
+        donnees = [r.to_dict() for r in reservations]
+        json.dump(donnees, f, indent=4)
