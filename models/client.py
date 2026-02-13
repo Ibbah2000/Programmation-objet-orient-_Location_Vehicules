@@ -26,3 +26,6 @@ class Client:
             data['id_client'], data['nom'], data['prenom'],
             data['mail'], data['telephone'], data['adresse']
         )
+    
+
+    

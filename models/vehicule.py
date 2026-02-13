@@ -26,3 +26,5 @@ class Vehicule:
             data['id_vehicule'], data['marque'], data['modele'],
             data['cylindree'], data['kilometrage_actuel'], data['date_mise_en_circulation']
         )
+    
+    

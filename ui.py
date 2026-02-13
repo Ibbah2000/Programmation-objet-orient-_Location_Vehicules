@@ -33,4 +33,16 @@ def saisir_reservation(clients, vehicules):
     date_ret = input("Date de retour (JJ/MM/AAAA) : ")
     forfait = int(input("Forfait km (100, 200, 300 ou 400 pour +300) : "))
     
-    return client_choisi, vehicule_choisi, date_dep, date_ret, forfait        
+    return client_choisi, vehicule_choisi, date_dep, date_ret, forfait  
+
+# Question 14
+def afficher_menu():
+    print(" MENU LOCATION VÉHICULES")
+    print("1. Liste des clients")
+    print("2. Liste des véhicules")
+    print("3. Créer une réservation")
+    print("4. Liste des réservations")
+    print("5. Bilan de l'agence")
+    print("6. Afficher la grille tarifaire")
+    print("7. Quitter")
+    return input("Votre choix : ")      
